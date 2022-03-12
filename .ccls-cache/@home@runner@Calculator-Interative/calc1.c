@@ -61,10 +61,32 @@ if (num==1){
   float div= di1 / di2;
   printf("O valor da divisão é: " "%.2f\n" , div);
 }
-
+     else if(num==5){
+       printf("Escolha um número\n");
+       float p1;
+       scanf("%f" , &p1);
+       getchar();
+       printf("Escolha outro número\n");
+       int p2;
+       scanf("%d" , &p2);
+       
+       int i;
+       int x=p1;
+       for(i=1; i<p2; i++){
+         p1= x * p1;
+       }
+    
+    printf("O valor da potenciação é: %.2f" , p1);
+       
+     }
   else{
     printf("Comando Inválido!!!");
   }
+  
+
+
+
+
   
   return 0;
 }

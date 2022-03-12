@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 int main(void) {
 
@@ -10,6 +11,8 @@ printf("Digite o número correspondente a operação que deseja realizar:\n");
    printf("(3)MULTIPLICAÇÃO\n");
    printf("(4)DIVISÃO\n");
   printf("(5)POTENCIAÇÃO\n");
+  printf("(6)RAIZ\n");
+  printf("(7)BASKARA\n");
 
 scanf("%d", &num);
 
@@ -79,7 +82,19 @@ if (num==1){
     printf("O valor da potenciação é: %.2f" , p1);
        
      }
-  else{
+        else if(num==6){
+       printf("Escolha um número\n");
+       float r1;
+       scanf("%f" , &r1);
+       getchar();
+       
+    int raiz= sqrt(r1);
+          
+          printf("O valor da raiz é: %.d" ,raiz );
+       
+     }
+  
+      else{
     printf("Comando Inválido!!!");
   }
   

@@ -5,6 +5,7 @@ int main(void) {
 
   int num;
   
+for(;;){
 printf("Digite o número correspondente a operação que deseja realizar:\n");
   printf("(1)SOMA\n");
    printf("(2)SUBTRAÇÃO\n");
@@ -14,6 +15,7 @@ printf("Digite o número correspondente a operação que deseja realizar:\n");
   printf("(6)RAIZ\n");
   printf("(7)BASKARA\n");
 printf("(8)DISTANCIA_ENTRE_2_PONTOS\n");
+printf("(9)PONTO_MEDIO\n");
 
 scanf("%d", &num);
 
@@ -80,7 +82,7 @@ if (num==1){
          p1= x * p1;
        }
     
-    printf("O valor da potenciação é: %.2f" , p1);
+    printf("O valor da potenciação é: %.2f\n" , p1);
        
      }
         else if(num==6){
@@ -91,7 +93,7 @@ if (num==1){
        
     int raiz= sqrt(r1);
           
-          printf("O valor da raiz é: %.d" ,raiz );
+          printf("O valor da raiz é: %.d\n" ,raiz );
        
      }
      
@@ -111,7 +113,7 @@ if (num==1){
          float x1= (-b + sqrt(b * b -4 * a * c)) /(2 * a);
            float x2= (-b - sqrt(b * b -4 * a * c)) /(2 * a);
            
-           printf("O valor de x1= %.2f e o valor de x2= %.2f " , x1 , x2);
+           printf("O valor de x1= %.2f e o valor de x2= %.2f\n " , x1 , x2);
      }
      
      else if(num==8){
@@ -132,13 +134,38 @@ if (num==1){
          scanf("%f" , &y2);
          
          float d= sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
-         printf("O valor da distância é: %.2f" , d);
+         printf("O valor da distância é: %.2f\n" , d);
+     }
+     
+     else if(num==9){
+         printf("Escolha um valor para x1: \n");
+         float x1;
+         scanf("%f" , &x1);
+         getchar();
+         printf("Escolha um valor para y1: \n");
+         float y1;
+         scanf("%f" , &y1);
+         getchar();
+         printf("Escolha um valor para x2: \n");
+         float x2;
+         scanf("%f" , &x2);
+         getchar();
+         printf("Escolha um valor para y2: \n");
+         float y2;
+         scanf("%f" , &y2);
+         
+         float pmx= (x1 + x2) / 2;
+         float pmy= (y1 + y2) / 2;
+         
+         printf("O valor do ponto médio é: (%.2f,%.2f)\n" , pmx , pmy);
+         
      }
   
       else{
-    printf("Comando Inválido!!!");
+    printf("Comando Inválido!!!\n");
   }
-  
+ 
+} 
 
 
 

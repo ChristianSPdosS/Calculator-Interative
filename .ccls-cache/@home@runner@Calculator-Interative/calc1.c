@@ -13,6 +13,7 @@ printf("Digite o número correspondente a operação que deseja realizar:\n");
   printf("(5)POTENCIAÇÃO\n");
   printf("(6)RAIZ\n");
   printf("(7)BASKARA\n");
+printf("(8)DISTANCIA_ENTRE_2_PONTOS\n");
 
 scanf("%d", &num);
 
@@ -92,6 +93,46 @@ if (num==1){
           
           printf("O valor da raiz é: %.d" ,raiz );
        
+     }
+     
+     else if(num==7){
+         printf("Escolha um valor para 'a': \n");
+         float a;
+         scanf("%f" , &a);
+         getchar();
+         printf("Escolha um valor para 'b': \n");
+         float b;
+         scanf("%f" , &b);
+         getchar();
+         printf("Escolha um valor para 'c': \n");
+         float c;
+         scanf("%f" , &c);
+         
+         float x1= (-b + sqrt(b * b -4 * a * c)) /(2 * a);
+           float x2= (-b - sqrt(b * b -4 * a * c)) /(2 * a);
+           
+           printf("O valor de x1= %.2f e o valor de x2= %.2f " , x1 , x2);
+     }
+     
+     else if(num==8){
+         printf("Escolha um valor para x1: \n");
+         float x1;
+         scanf("%f" , &x1);
+         getchar();
+         printf("Escolha um valor para y1: \n");
+         float y1;
+         scanf("%f" , &y1);
+         getchar();
+         printf("Escolha um valor para x2: \n");
+         float x2;
+         scanf("%f" , &x2);
+         getchar();
+         printf("Escolha um valor para y2: \n");
+         float y2;
+         scanf("%f" , &y2);
+         
+         float d= sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+         printf("O valor da distância é: %.2f" , d);
      }
   
       else{

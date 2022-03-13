@@ -93,6 +93,25 @@ if (num==1){
           printf("O valor da raiz é: %.d" ,raiz );
        
      }
+     
+     else if(num==7){
+         printf("Escolha um valor para 'a': \n");
+         float a;
+         scanf("%f" , &a);
+         getchar();
+         printf("Escolha um valor para 'b': \n");
+         float b;
+         scanf("%f" , &b);
+         getchar();
+         printf("Escolha um valor para 'c': \n");
+         float c;
+         scanf("%f" , &c);
+         
+         float x1= (-b + sqrt(b * b -4 * a * c)) /(2 * a);
+           float x2= (-b - sqrt(b * b -4 * a * c)) /(2 * a);
+           
+           printf("O valor de x1= %.2f e o valor de x2= %.2f " , x1 , x2);
+     }
   
       else{
     printf("Comando Inválido!!!");
